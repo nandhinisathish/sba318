@@ -1,6 +1,6 @@
-## SBA 
+# SBA 
 
-# Create the server and run 
+## Create the server and run 
 1. Create server.js file and then run git init to initailize with git
 2. run "npm init -y" - to generate the basic project settings
 3. Add type as "module" or change the extension as "mjs" everywhere(in package.json)
@@ -21,3 +21,5 @@
 9. The below statement confirms server is up and running
      "Server running on the PORT: 3000" 
      can also verify the same in the browser http://localhost:3000/
+
+     
