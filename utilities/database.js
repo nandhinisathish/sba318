@@ -1,15 +1,19 @@
 export const database = [
     {
         id: 1, 
-        name: "nandhini"
+        name: "Nandhini",
+        email: "Nandhini@gmail.com"
     }, {
         id: 2, 
-        name: "pranikha"
+        name: "Pranikha",
+        email: "Pranikha@gmail.com"
     }, {
         id: 3, 
-        name: "pranith"
+        name: "Pranith",
+        email: "Pranith@gmail.com"
     }, {
         id: 4, 
-        name: "sathish"
+        name: "Sathish",
+        email: "Sathish@gmail.com"
     }
 ];

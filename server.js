@@ -2,6 +2,8 @@
 import express from 'express';
 import globalErr from './middlewares/globarErr.js';
 import userRoutes from './routes/userRoutes.js';
+import studentsRoutes from './routes/studentsRoutes.js';
+import courseDetailRoutes from './routes/courseDetailsRoutes.js'
 import morgan from 'morgan';
 import { database } from './utilities/database.js';
 import fs from 'fs';
@@ -38,12 +40,15 @@ app.use(express.urlencoded({extended: true}));
 app.use('/api/user', userRoutes);
 app.get('/',(req, res)=>{
     let options ={
-        title: "Add user",
+        title: "New student info",
         content:"addfsfdsfdgsf hfhjfhf hjgkghgkhfg"
     }
 
     res.render("userForm", options);
 })
+app.use('/api/students', studentsRoutes);
+app.use('/api/courseDetails', courseDetailRoutes);
+
 // Global error handling
 app.use(globalErr);
 

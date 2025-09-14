@@ -8,10 +8,11 @@ const router = express.Router();
 // @desc: create user
 // @access: public
 router.post('/', (req, res)=>{
-    let {name} = req.body;
+    let {user_name, user_email} = req.body;
     
-    let newDBEntry = { id: database.length,
-        name
+    let newDBEntry = { id: database.length + 1,
+        user_name,
+        user_email
     }
 
     database.push(newDBEntry);
@@ -19,10 +20,10 @@ router.post('/', (req, res)=>{
     console.log(req.body);
  //res.json({msg:"testing Create or POST route"});
  
- // res.status(201).json({msg: "New entry created in the DB", item: newDBEntry})
+  res.status(201).json({msg: "New entry created in the DB", item: newDBEntry})
 
  // this will redirect to the path given
-  res.status(201).redirect('/api/user');
+  //res.status(201).redirect('/api/user');
 })
 
 // Read - GET
@@ -32,6 +33,16 @@ router.post('/', (req, res)=>{
 router.get('/', (req, res)=>{
  //res.json({msg:"testing GET route"});
   res.json(database);
+})
+
+// Read - GET
+// @route: /api/user/:id
+// @desc: get user information
+// @access: public
+router.get('/:id', (req, res)=>{
+ //res.json({msg:"testing GET route"});
+  let id = Number(req.params.id);
+  res.json(database[id]);
 })
 
 // Update - PUT
