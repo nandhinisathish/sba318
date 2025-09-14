@@ -1,26 +1,17 @@
-###Built with:
-    * Javascript
-    * CSS
-    * HTML
-    * ExpressJs
-    * NodeJS
+##Built with:
+    + Javascript
+    + CSS
+    + HTML
+    + ExpressJs
+    + NodeJS
 
-###API Reference
+##API Reference
 
------------------------------------------
 | VERB      |  PATH                     |
------------------------------------------
 | GET       |  /api/user                |
------------------------------------------
 | GET       |  /api/user/:id            |
------------------------------------------
 | POST      |  /api/user                |
------------------------------------------
 | PUT       |  /api/user/:id            |
------------------------------------------
 | DELETE    |  /api/user/:id            |
------------------------------------------
 | GET       |  /api/courseDetails       |
------------------------------------------
 | GET       |  /api/students            |
------------------------------------------
